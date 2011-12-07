@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<routes xmlns="http://symfony.com/schema/routing"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://symfony.com/schema/routing http://symfony.com/schema/routing/routing-1.0.xsd">
+
+    <route id="type_carte_list" pattern="/type_cartes">
+        <default key="_controller">TcgDatabaseBundle:TypeCarte:index</default>
+    </route>
+
+    <route id="type_carte_show" pattern="/type_carte/{id}/show">
+        <default key="_controller">TcgDatabaseBundle:TypeCarte:show</default>
+    </route>
+
+    <route id="type_carte_new" pattern="/type_carte/new">
+        <default key="_controller">TcgDatabaseBundle:TypeCarte:new</default>
+    </route>
+
+    <route id="type_carte_create" pattern="/type_carte/create">
+        <default key="_controller">TcgDatabaseBundle:TypeCarte:create</default>
+    </route>
+
+    <route id="type_carte_edit" pattern="/type_carte/{id}/edit">
+        <default key="_controller">TcgDatabaseBundle:TypeCarte:edit</default>
+    </route>
+
+    <route id="type_carte_update" pattern="/type_carte/{id}/update">
+        <default key="_controller">TcgDatabaseBundle:TypeCarte:update</default>
+    </route>
+
+    <route id="type_carte_delete" pattern="/type_carte/{id}/delete">
+        <default key="_controller">TcgDatabaseBundle:TypeCarte:delete</default>
+    </route>
+
+</routes>

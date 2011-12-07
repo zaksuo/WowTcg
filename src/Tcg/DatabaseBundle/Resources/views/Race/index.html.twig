@@ -1,0 +1,12 @@
+{% extends "TcgDatabaseBundle::layout.html.twig" %}
+
+{% block content %}
+    <h1>Races</h1>
+
+    <a href="{{ path('race_new') }}">Ajouter une race</a>
+    <ul>
+    {% for entity in entities %}
+        <li>{{ entity.libelle }} - <a href="{{ path('race_edit', { 'id': entity.id }) }}">Modifier</a> <a href="{{ path('race_delete', { 'id': entity.id }) }}">Supprimer</a></li>
+    {% endfor %}
+    </ul>
+{% endblock content %}

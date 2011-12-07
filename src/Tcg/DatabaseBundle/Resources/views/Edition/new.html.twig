@@ -1,0 +1,35 @@
+{% extends "TcgDatabaseBundle::layout.html.twig" %}
+
+{% block content %}
+    <h1>Ajout d'une nouvelle édition</h1>
+
+    <form action="{{ path('edition_create') }}" method="post" {{ form_enctype(form) }}>
+        <table>
+            <tr>
+                <td>{{ form_label(form.libelle) }}</td>
+                <td>{{ form_widget(form.libelle) }}</td>
+            </tr>
+            <tr>
+                <td>{{ form_label(form.nbCartes) }}</td>
+                <td>{{ form_widget(form.nbCartes) }}</td>
+            </tr>
+            <tr>
+                <td>{{ form_label(form.starterDeck) }}</td>
+                <td>{{ form_widget(form.starterDeck) }} Oui</td>
+            </tr>
+            <tr>
+                <td>{{ form_label(form.typeEdition) }}</td>
+                <td>{{ form_widget(form.typeEdition) }}</td>
+            </tr>
+            <tr>
+                <td>{{ form_label(form.icone) }}</td>
+                <td>{{ form_widget(form.icone) }}</td>
+            </tr>
+        </table>
+        
+        {{ form_rest(form) }}
+        
+        <button type="submit">Ajouter</button> <a href="{{ path('edition_list') }}">Retour</a>
+    </form>
+
+{% endblock content %}

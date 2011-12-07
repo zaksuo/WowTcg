@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<routes xmlns="http://symfony.com/schema/routing"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://symfony.com/schema/routing http://symfony.com/schema/routing/routing-1.0.xsd">
+
+    <route id="type_edition_list" pattern="/types_editions">
+        <default key="_controller">TcgDatabaseBundle:TypeEdition:index</default>
+    </route>
+
+    <route id="type_edition_show" pattern="/type_edition/{id}/show">
+        <default key="_controller">TcgDatabaseBundle:TypeEdition:show</default>
+    </route>
+
+    <route id="type_edition_new" pattern="/type_edition/new">
+        <default key="_controller">TcgDatabaseBundle:TypeEdition:new</default>
+    </route>
+
+    <route id="type_edition_create" pattern="/type_edition/create">
+        <default key="_controller">TcgDatabaseBundle:TypeEdition:create</default>
+    </route>
+
+    <route id="type_edition_edit" pattern="/type_edition/{id}/edit">
+        <default key="_controller">TcgDatabaseBundle:TypeEdition:edit</default>
+    </route>
+
+    <route id="type_edition_update" pattern="/type_edition/{id}/update">
+        <default key="_controller">TcgDatabaseBundle:TypeEdition:update</default>
+    </route>
+
+    <route id="type_edition_delete" pattern="/type_edition/{id}/delete">
+        <default key="_controller">TcgDatabaseBundle:TypeEdition:delete</default>
+    </route>
+
+</routes>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<routes xmlns="http://symfony.com/schema/routing"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://symfony.com/schema/routing http://symfony.com/schema/routing/routing-1.0.xsd">
+
+    <route id="specialisation_list" pattern="/specialisations">
+        <default key="_controller">TcgDatabaseBundle:Specialisation:index</default>
+    </route>
+
+    <route id="specialisation_show" pattern="/specialisation/{id}/show">
+        <default key="_controller">TcgDatabaseBundle:Specialisation:show</default>
+    </route>
+
+    <route id="specialisation_new" pattern="/specialisation/new">
+        <default key="_controller">TcgDatabaseBundle:Specialisation:new</default>
+    </route>
+
+    <route id="specialisation_create" pattern="/specialisation/create">
+        <default key="_controller">TcgDatabaseBundle:Specialisation:create</default>
+    </route>
+
+    <route id="specialisation_edit" pattern="/specialisation/{id}/edit">
+        <default key="_controller">TcgDatabaseBundle:Specialisation:edit</default>
+    </route>
+
+    <route id="specialisation_update" pattern="/specialisation/{id}/update">
+        <default key="_controller">TcgDatabaseBundle:Specialisation:update</default>
+    </route>
+
+    <route id="specialisation_delete" pattern="/specialisation/{id}/delete">
+        <default key="_controller">TcgDatabaseBundle:Specialisation:delete</default>
+    </route>
+
+</routes>

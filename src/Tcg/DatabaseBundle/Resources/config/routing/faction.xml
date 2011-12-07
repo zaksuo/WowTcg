@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<routes xmlns="http://symfony.com/schema/routing"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://symfony.com/schema/routing http://symfony.com/schema/routing/routing-1.0.xsd">
+
+    <route id="faction_list" pattern="/factions">
+        <default key="_controller">TcgDatabaseBundle:Faction:index</default>
+    </route>
+
+    <route id="faction_show" pattern="/faction/{id}/show">
+        <default key="_controller">TcgDatabaseBundle:Faction:show</default>
+    </route>
+
+    <route id="faction_new" pattern="/faction/new">
+        <default key="_controller">TcgDatabaseBundle:Faction:new</default>
+    </route>
+
+    <route id="faction_create" pattern="/faction/create">
+        <default key="_controller">TcgDatabaseBundle:Faction:create</default>
+    </route>
+
+    <route id="faction_edit" pattern="/faction/{id}/edit">
+        <default key="_controller">TcgDatabaseBundle:Faction:edit</default>
+    </route>
+
+    <route id="faction_update" pattern="/faction/{id}/update">
+        <default key="_controller">TcgDatabaseBundle:Faction:update</default>
+    </route>
+
+    <route id="faction_delete" pattern="/faction/{id}/delete">
+        <default key="_controller">TcgDatabaseBundle:Faction:delete</default>
+    </route>
+
+</routes>

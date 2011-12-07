@@ -1,0 +1,9 @@
+{% extends "TcgDatabaseBundle::layout.html.twig" %}
+
+{% block content %}
+
+    <form action="{{ path('classe_create') }}" method="post" {{ form_enctype(form) }}>
+        {{ form_widget(form) }}
+        <button type="submit">Créer</button><a href="{{ path('classe_list') }}">Retour</a>
+    </form>
+{% endblock %}

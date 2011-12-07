@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<routes xmlns="http://symfony.com/schema/routing"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://symfony.com/schema/routing http://symfony.com/schema/routing/routing-1.0.xsd">
+
+    <route id="edition_list" pattern="/editions">
+        <default key="_controller">TcgDatabaseBundle:Edition:index</default>
+    </route>
+
+    <route id="edition_show" pattern="/edition/{id}/show">
+        <default key="_controller">TcgDatabaseBundle:Edition:show</default>
+    </route>
+
+    <route id="edition_new" pattern="/edition/new">
+        <default key="_controller">TcgDatabaseBundle:Edition:new</default>
+    </route>
+
+    <route id="edition_create" pattern="/edition/create">
+        <default key="_controller">TcgDatabaseBundle:Edition:create</default>
+        <requirement key="_method">post</requirement>
+    </route>
+
+    <route id="edition_edit" pattern="/edition/{id}/edit">
+        <default key="_controller">TcgDatabaseBundle:Edition:edit</default>
+    </route>
+
+    <route id="edition_update" pattern="/edition/{id}/update">
+        <default key="_controller">TcgDatabaseBundle:Edition:update</default>
+        <requirement key="_method">post</requirement>
+    </route>
+
+    <route id="edition_delete" pattern="/edition/{id}/delete">
+        <default key="_controller">TcgDatabaseBundle:Edition:delete</default>
+        <requirement key="_method">post</requirement>
+    </route>
+
+</routes>

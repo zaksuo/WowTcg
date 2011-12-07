@@ -1,0 +1,12 @@
+{% extends "TcgDatabaseBundle::layout.html.twig" %}
+
+{% block content %}
+    <h1>Liste des spécialisations</h1>
+
+    <a href="{{ path('specialisation_new') }}">Ajouter une spécialisation</a>
+    <ul>
+    {% for entity in entities %}
+        <li>{{ entity.libelle }} - <a href="{{ path('specialisation_edit', { 'id': entity.id }) }}">Modifier</a> <a href="{{ path('specialisation_delete', { 'id': entity.id }) }}">Supprimer</a>
+    {% endfor %}
+    </ul>
+{% endblock %}

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="Tcg\DatabaseBundle\Entity\TcgCaracteristiques" table="tcg_caracteristiques">
+    <change-tracking-policy>DEFERRED_IMPLICIT</change-tracking-policy>
+    <id name="id" type="integer" column="id">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="cout" type="integer" column="cout"/>
+    <field name="coutIcone" type="string" column="cout_icone" length="100"/>
+    <field name="attaque" type="integer" column="attaque"/>
+    <field name="vie" type="integer" column="vie"/>
+    <many-to-one field="attaqueType" target-entity="TcgAttaqueType" orphan-removal="">
+      <join-columns>
+        <join-column name="attaque_type" referenced-column-name="id"/>
+      </join-columns>
+    </many-to-one>
+    <lifecycle-callbacks/>
+  </entity>
+</doctrine-mapping>

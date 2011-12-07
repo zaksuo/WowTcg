@@ -1,0 +1,12 @@
+{% extends "TcgDatabaseBundle::layout.html.twig" %}
+
+{% block content %}
+    <h1>Types d'éditions</h1>
+
+    <a href="{{ path('type_edition_new') }}">Ajouter un type d'édition</a>
+    <ul>
+        {% for entity in entities %}
+            <li>{{ entity.icone }}{{ entity.libelle }} - <a href="{{ path('type_edition_edit', { 'id': entity.id }) }}">Modifier</a> <a href="{{ path('type_edition_delete', { 'id': entity.id }) }}">Supprimer</a></li>
+        {% endfor %}
+    </ul>
+{% endblock content %}

@@ -1,0 +1,16 @@
+{% extends "TcgDatabaseBundle::layout.html.twig" %}
+
+{% block content %}    
+    <h1>Liste des types de cartes</h1>
+
+    <a href="{{ path('type_carte_new') }}">Ajouter un type de carte</a>
+    <ul>
+        {% for entity in entities %}
+            <li>
+                {{ entity.icone }} {{ entity.libelle }}
+                <a href="{{ path('type_carte_edit', { 'id': entity.id }) }}">Modifier</a>
+                <a href="{{ path('type_carte_delete', { 'id': entity.id }) }}">Supprimer</a>
+            </li>
+        {% endfor %}
+    </ul>
+{% endblock %}

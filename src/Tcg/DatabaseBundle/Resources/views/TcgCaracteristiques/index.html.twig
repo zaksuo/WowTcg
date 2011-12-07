@@ -1,0 +1,43 @@
+<h1>TcgCaracteristiques list</h1>
+
+<table class="records_list">
+    <thead>
+        <tr>
+            <th>Cout</th>
+            <th>Couticone</th>
+            <th>Attaque</th>
+            <th>Vie</th>
+            <th>Id</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+    {% for entity in entities %}
+        <tr>
+            <td><a href="{{ path('caracteristiques_show', { 'id': entity.id }) }}">{{ entity.cout }}</a></td>
+            <td>{{ entity.coutIcone }}</td>
+            <td>{{ entity.attaque }}</td>
+            <td>{{ entity.vie }}</td>
+            <td>{{ entity.id }}</td>
+            <td>
+                <ul>
+                    <li>
+                        <a href="{{ path('caracteristiques_show', { 'id': entity.id }) }}">show</a>
+                    </li>
+                    <li>
+                        <a href="{{ path('caracteristiques_edit', { 'id': entity.id }) }}">edit</a>
+                    </li>
+                </ul>
+            </td>
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>
+
+<ul>
+    <li>
+        <a href="{{ path('caracteristiques_new') }}">
+            Create a new entry
+        </a>
+    </li>
+</ul>

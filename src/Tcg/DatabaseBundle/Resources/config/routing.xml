@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<routes xmlns="http://symfony.com/schema/routing"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://symfony.com/schema/routing http://symfony.com/schema/routing/routing-1.0.xsd">
+
+    <route id="TcgDatabaseBundle_homepage" pattern="/database">
+        <default key="_controller">TcgDatabaseBundle:Database:index</default>
+    </route>
+    
+    <import resource="@TcgDatabaseBundle/Resources/config/routing/edition.xml" />
+    <import resource="@TcgDatabaseBundle/Resources/config/routing/typeedition.xml" />
+    <import resource="@TcgDatabaseBundle/Resources/config/routing/faction.xml" />
+    <import resource="@TcgDatabaseBundle/Resources/config/routing/race.xml" />
+    <import resource="@TcgDatabaseBundle/Resources/config/routing/classe.xml" />
+    <import resource="@TcgDatabaseBundle/Resources/config/routing/specialisation.xml" />
+    <import resource="@TcgDatabaseBundle/Resources/config/routing/typecarte.xml" />
+    <import resource="@TcgDatabaseBundle/Resources/config/routing/caracteristiques.xml" />
+    <import resource="@TcgDatabaseBundle/Resources/config/routing/donnees.xml" />
+    <import resource="@TcgDatabaseBundle/Resources/config/routing/carte.xml" />
+</routes>

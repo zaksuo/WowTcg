@@ -1,0 +1,26 @@
+{% extends "TcgDatabaseBundle::layout.html.twig" %}
+
+{% block content %}
+    <h1>Modification de l'édition</h1>
+
+    <form action="{{ path('edition_update', { 'id': entity.id }) }}" method="post" {{ form_enctype(edit_form) }}>
+        {{ form_widget(edit_form) }}
+        <p>
+            <button type="submit">Editer</button>
+        </p>
+    </form>
+
+    <ul class="record_actions">
+        <li>
+            <a href="{{ path('edition_list') }}">
+                Retour
+            </a>
+        </li>
+        <li>
+            <form action="{{ path('edition_delete', { 'id': entity.id }) }}" method="post">
+                {{ form_widget(delete_form) }}
+                <button type="submit">Supprimer</button>
+            </form>
+        </li>
+    </ul>
+{% endblock %}

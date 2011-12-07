@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<routes xmlns="http://symfony.com/schema/routing"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://symfony.com/schema/routing http://symfony.com/schema/routing/routing-1.0.xsd">
+
+    <route id="caracteristiques" pattern="/caracteristiques">
+        <default key="_controller">TcgDatabaseBundle:Caracteristiques:index</default>
+    </route>
+
+    <route id="caracteristiques_show" pattern="/caracteristiques/{id}/show">
+        <default key="_controller">TcgDatabaseBundle:Caracteristiques:show</default>
+    </route>
+<!--
+    <route id="caracteristiques_new" pattern="/new">
+        <default key="_controller">TcgDatabaseBundle:Caracteristiques:new</default>
+    </route>
+
+    <route id="caracteristiques_create" pattern="/create">
+        <default key="_controller">TcgDatabaseBundle:Caracteristiques:create</default>
+        <requirement key="_method">post</requirement>
+    </route>
+
+    <route id="caracteristiques_edit" pattern="/{id}/edit">
+        <default key="_controller">TcgDatabaseBundle:Caracteristiques:edit</default>
+    </route>
+
+    <route id="caracteristiques_update" pattern="/{id}/update">
+        <default key="_controller">TcgDatabaseBundle:Caracteristiques:update</default>
+        <requirement key="_method">post</requirement>
+    </route>
+
+    <route id="caracteristiques_delete" pattern="/{id}/delete">
+        <default key="_controller">TcgDatabaseBundle:Caracteristiques:delete</default>
+        <requirement key="_method">post</requirement>
+    </route>
+-->
+</routes>

@@ -1,0 +1,20 @@
+{% extends "TcgDatabaseBundle::layout.html.twig" %}
+
+
+{% block content %}
+    <h1>Liste des éditions</h1>
+
+    <a href="{{ path('edition_new') }}">Ajouter une édition</a>
+    
+    <ul class="edition_list">
+        {% for entity in entities %}
+            <li>
+                <a href="{{ path('edition_show', { 'id': entity.id }) }}">
+                <img class="edition_icon" src="/bundles/tcgcollection/images/edition/{{ entity.id }}.png"><br />
+                {{ entity.libelle }}</a><br />
+                {{ entity.nbCartes }} Cartes<br />
+                {#<a href="{{ path('edition_show', { 'id': entity.id }) }}">Visualiser</a> | <a href="{{ path('edition_edit', { 'id': entity.id }) }}">Modifier</a>#}
+            </li>
+        {% endfor %}
+    </ul>
+{% endblock content %}

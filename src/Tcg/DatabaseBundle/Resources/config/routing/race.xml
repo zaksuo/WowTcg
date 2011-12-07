@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<routes xmlns="http://symfony.com/schema/routing"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://symfony.com/schema/routing http://symfony.com/schema/routing/routing-1.0.xsd">
+
+    <route id="race_list" pattern="/races">
+        <default key="_controller">TcgDatabaseBundle:Race:index</default>
+    </route>
+
+    <route id="race_show" pattern="/race/{id}/show">
+        <default key="_controller">TcgDatabaseBundle:Race:show</default>
+    </route>
+
+    <route id="race_new" pattern="/race/new">
+        <default key="_controller">TcgDatabaseBundle:Race:new</default>
+    </route>
+
+    <route id="race_create" pattern="/race/create">
+        <default key="_controller">TcgDatabaseBundle:Race:create</default>
+    </route>
+
+    <route id="race_edit" pattern="/race/{id}/edit">
+        <default key="_controller">TcgDatabaseBundle:Race:edit</default>
+    </route>
+
+    <route id="race_update" pattern="/race/{id}/update">
+        <default key="_controller">TcgDatabaseBundle:Race:update</default>
+    </route>
+
+    <route id="race_delete" pattern="/race/{id}/delete">
+        <default key="_controller">TcgDatabaseBundle:Race:delete</default>
+    </route>
+
+</routes>

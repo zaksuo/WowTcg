@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<routes xmlns="http://symfony.com/schema/routing"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://symfony.com/schema/routing http://symfony.com/schema/routing/routing-1.0.xsd">
+
+    <route id="classe_list" pattern="/classes">
+        <default key="_controller">TcgDatabaseBundle:Classe:index</default>
+    </route>
+
+    <route id="classe_show" pattern="/classe/{id}/show">
+        <default key="_controller">TcgDatabaseBundle:Classe:show</default>
+    </route>
+
+    <route id="classe_new" pattern="/classe/new">
+        <default key="_controller">TcgDatabaseBundle:Classe:new</default>
+    </route>
+
+    <route id="classe_create" pattern="/classe/create">
+        <default key="_controller">TcgDatabaseBundle:Classe:create</default>
+    </route>
+
+    <route id="classe_edit" pattern="/classe/{id}/edit">
+        <default key="_controller">TcgDatabaseBundle:Classe:edit</default>
+    </route>
+
+    <route id="classe_update" pattern="/classe/{id}/update">
+        <default key="_controller">TcgDatabaseBundle:Classe:update</default>
+    </route>
+
+    <route id="classe_delete" pattern="/classe/{id}/delete">
+        <default key="_controller">TcgDatabaseBundle:Classe:delete</default>
+    </route>
+
+</routes>

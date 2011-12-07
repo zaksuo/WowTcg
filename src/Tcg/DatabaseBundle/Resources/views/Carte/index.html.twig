@@ -1,0 +1,43 @@
+{% extends "TcgDatabaseBundle::layout.html.twig" %}
+
+{% block content %}
+    <h1>Liste des cartes</h1>
+
+    <a href="{{ path('carte_new') }}">Ajouter une carte</a>
+
+    <table class="records_list">
+        <thead>
+            <tr>
+                <th>Libelle</th>
+                <th>Typecarte</th>
+                <th>Donnees</th>
+                <th>Caracteristiques</th>
+                <th>Image</th>
+                <th>Id</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for entity in entities %}
+            <tr>
+                <td><a href="{{ path('carte_show', { 'id': entity.id }) }}">{{ entity.libelle }}</a></td>
+                <td>{{ entity.typeCarte }}</td>
+                <td>{{ entity.donnees }}</td>
+                <td>{{ entity.caracteristiques }}</td>
+                <td>{{ entity.image }}</td>
+                <td>{{ entity.id }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('carte_show', { 'id': entity.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('carte_edit', { 'id': entity.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}

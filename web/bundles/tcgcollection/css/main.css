@@ -1,0 +1,80 @@
+/* 
+    Document   : main
+    Created on : 19 nov. 2011, 00:56:46
+    Author     : gautierju
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+/* 
+   TODO customize this sample style
+   Syntax recommendation http://www.w3.org/TR/REC-CSS2/
+*/
+
+body { 
+    font-size: 14px;
+    width: 480px;
+    margin: 0 auto;
+}
+
+#main_menu {
+    border : 1px solid gray;
+    -moz-border-radius : 10px 10px 10px 10px;
+    -webkit-border-radius : 10px 10px 10px 10px;
+    border-radius : 10px 10px 10px 10px;
+    height : 35px;
+    list-style-type : none;
+    margin-left : 0;
+    padding-left : 0;
+}
+
+#main_menu li {
+    float : left;
+    width : 20%;
+    text-align : center;
+}
+
+#main_content {
+    border : 1px solid gray;
+    -moz-border-radius : 10px 10px 10px 10px;
+    -webkit-border-radius : 10px 10px 10px 10px;
+    border-radius : 10px 10px 10px 10px;
+    padding : 20px;
+    height : 100%;
+    min-height : 1000px;
+    background-color : #EFEFEF;
+}
+
+h1 {
+    margin-top : 0;
+    color : gray;
+    text-align : center;
+    border-bottom : 1px dashed black;
+}
+
+.edition_list {
+    border-top : 1px solid gray;
+    list-style-type : none;
+    padding-left : 0;
+    margin : 0 auto;
+}
+
+.edition_list li{
+    -moz-border-radius : 10px 10px 10px 10px;
+    -webkit-border-radius : 10px 10px 10px 10px;
+    border-radius : 10px 10px 10px 10px;
+    float : left;
+    border : 1px solid gray;
+    padding : 5px;
+    width : 122px;
+    margin: 5px;
+    text-align: center;
+    height : 150px;
+    background-color : white;
+}
+
+.edition_icon {
+    width : 100px;
+    height : 100px;
+    margin : 0 auto;
+}

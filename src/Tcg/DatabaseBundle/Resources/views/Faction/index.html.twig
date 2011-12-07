@@ -1,0 +1,12 @@
+{% extends "TcgDatabaseBundle::layout.html.twig" %}
+
+{% block content %}
+    <h1>Factions</h1>
+    
+    <a href="{{ path('faction_new') }}">Ajouter une faction</a>
+    <ul>
+        {% for entity in entities %}
+            <li>{{ entity.icone }}{{ entity.libelle }} - <a href="{{ path('faction_edit', { 'id': entity.id }) }}">Modfier</a> <a href="{{ path('faction_delete', { 'id': entity.id }) }}">Supprimer</a></li>
+        {% endfor %}
+    </ul>
+{% endblock content %}

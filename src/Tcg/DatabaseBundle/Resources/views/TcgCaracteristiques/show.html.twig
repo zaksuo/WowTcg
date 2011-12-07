@@ -1,0 +1,45 @@
+<h1>TcgCaracteristiques</h1>
+
+<table class="record_properties">
+    <tbody>
+        <tr>
+            <th>Cout</th>
+            <td>{{ entity.cout }}</td>
+        </tr>
+        <tr>
+            <th>Couticone</th>
+            <td>{{ entity.coutIcone }}</td>
+        </tr>
+        <tr>
+            <th>Attaque</th>
+            <td>{{ entity.attaque }}</td>
+        </tr>
+        <tr>
+            <th>Vie</th>
+            <td>{{ entity.vie }}</td>
+        </tr>
+        <tr>
+            <th>Id</th>
+            <td>{{ entity.id }}</td>
+        </tr>
+    </tbody>
+</table>
+
+<ul class="record_actions">
+    <li>
+        <a href="{{ path('caracteristiques') }}">
+            Back to the list
+        </a>
+    </li>
+    <li>
+        <a href="{{ path('caracteristiques_edit', { 'id': entity.id }) }}">
+            Edit
+        </a>
+    </li>
+    <li>
+        <form action="{{ path('caracteristiques_delete', { 'id': entity.id }) }}" method="post">
+            {{ form_widget(delete_form) }}
+            <button type="submit">Delete</button>
+        </form>
+    </li>
+</ul>
